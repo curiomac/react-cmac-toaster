@@ -1,0 +1,59 @@
+/* Toaster */
+
+.toast_container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1002;
+  }
+  
+  .toast_container .toast {
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.259);
+    animation-name: slide-toast;
+    animation-duration: 0.35s;
+    border-radius: 5px;
+  }
+  
+  .toast_container .toast button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.5;
+  }
+  
+  @media screen and (max-width: 576px) {
+    .toast_container {
+      left: 10px !important;
+    }
+  }
+  
+  @keyframes slide-toast {
+    0% {
+      transform: translateX(100%);
+    }
+    60% {
+      transform: translateX(-15%);
+    }
+    80% {
+      transform: translateX(5%);
+    }
+    80% {
+      transform: translateX(0);
+    }
+  }
