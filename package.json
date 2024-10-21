@@ -1,6 +1,6 @@
 {
   "name": "react-cmac-toaster",
-  "version": "0.0.10",
+  "version": "0.0.12",
   "description": "React Cmac Toaster is a lightweight and customizable toast notification library designed for React applications",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -9,8 +9,16 @@
     "rollup": "rollup -c --bundleConfigAsCjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Curiomac Engine",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/curiomac/react-cmac-toaster.git"
+  },
+  "homepage": "https://github.com/curiomac/react-cmac-toaster#readme",
+  "bugs": {
+    "url": "https://github.com/curiomac/react-cmac-toaster/issues"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.1",
     "@rollup/plugin-node-resolve": "^15.3.0",
