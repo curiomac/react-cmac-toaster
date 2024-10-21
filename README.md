@@ -2,6 +2,7 @@
 # React Cmac Toaster
 
 [![npm version](https://badge.fury.io/js/react-cmac-toaster.svg)](https://badge.fury.io/js/react-cmac-toaster)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A simple and customizable React toast notification library for easy toast management in your applications. This package provides context-based toasts without requiring external dependencies like Redux.
 
