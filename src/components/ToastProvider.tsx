@@ -15,8 +15,8 @@ export const ToastProvider = (props: ToastProviderProps) => {
     (
       message: string | (() => ReactNode),
       {
-        toastWidth = "330px",
-        toastMsgWidth = "298px",
+        toastWidth = "100%",
+        toastMsgWidth = "100%",
         backgroundColor = "#ffffff",
         color = "#000000",
         timeoutSeconds = 3000,

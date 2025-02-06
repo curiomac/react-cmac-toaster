@@ -98,8 +98,8 @@ The `open` function accepts a message (which can be a string or JSX element) and
 
 | Option            | Type      | Default     | Description                                                                                                                 |
 | ----------------- | --------- | ----------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `toastWidth`      | `string`  | `"330px"`   | Sets the width of the toast.                                                                                                |
-| `toastMsgWidth`   | `string`  | `"298px"`   | Sets the width of the message area inside the toast.                                                                        |
+| `toastWidth`      | `string`  | `"100%"`   | Sets the width of the toast.                                                                                                |
+| `toastMsgWidth`   | `string`  | `"100%"`   | Sets the width of the message area inside the toast.                                                                        |
 | `backgroundColor` | `string`  | `"#ffffff"` | Sets the background color of the toast.                                                                                     |
 | `color`           | `string`  | `"#000000"` | Sets the text color of the toast.                                                                                           |
 | `showCloseBtn`    | `boolean` | `true`      | Determines whether the close button should be displayed.                                                                    |

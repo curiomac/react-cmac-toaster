@@ -7,15 +7,15 @@ import AnimationComponent from "../plugins/AnimationComponent";
 export const Toaster = () => {
   const { toasts, close } = useToast();
 
-  // useEffect(() => {
-  //   if (toasts.length > 0) {
-  //     const interval = setInterval(() => {
-  //       close(toasts[0].id);
-  //     }, toasts[0]?.timeoutSeconds);
+  useEffect(() => {
+    if (toasts.length > 0) {
+      const interval = setInterval(() => {
+        close(toasts[0].id);
+      }, toasts[0]?.timeoutSeconds);
 
-  //     return () => clearInterval(interval);
-  //   }
-  // }, [toasts, close]);
+      return () => clearInterval(interval);
+    }
+  }, [toasts, close]);
 
   return (
     <div className="toast_container">
@@ -37,6 +37,7 @@ export const Toaster = () => {
                   paddingTop: "7px",
                   paddingBottom: "7px",
                 }),
+                ...(toast.showCloseBtn === false && { paddingRight: "10px" }),
               }}
             >
               {toast?.toastStatus !== "default" && (
