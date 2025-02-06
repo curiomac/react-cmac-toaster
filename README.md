@@ -62,9 +62,10 @@ const ExampleComponent = () => {
   const showToast = () => {
     // Displaying a simple text message
     toast.open("This is a simple toast message!", {
-      backgroundColor: "lightblue",
-      color: "black",
+      backgroundColor: "black",
+      color: "white",
       timeoutSeconds: 5000,
+      toastStatus: "success"
     });
 
     // Displaying a custom JSX element
@@ -75,7 +76,8 @@ const ExampleComponent = () => {
       </div>
     );
     toast.open(customToast, {
-      backgroundColor: "lightgreen",
+      backgroundColor: "red",
+      color: "white",
     });
   };
 
@@ -101,7 +103,9 @@ The `open` function accepts a message (which can be a string or JSX element) and
 | `toastMsgWidth` | `string`  | `"298px"`                      | Sets the width of the message area inside the toast.        |
 | `backgroundColor`| `string` | `"#ffffff"`| Sets the background color of the toast.                     |
 | `color`         | `string`  | `"#000000"`       | Sets the text color of the toast.                          |
+| `showCloseBtn`         | `boolean`  | `true`       | Determines whether the close button should be displayed.                          |
 | `timeoutSeconds`| `number`  | `3000`                         | Sets how long the toast should be visible (in milliseconds).|
+| `toastStatus`   | `string`                                  | `"default"`  | Accepts one of the following values to define the toast type: `"success"`, `"error"`, `"warning"`, `"notify"`, `"default"`. |
 
 ### 4. Closing a Toast Programmatically
 

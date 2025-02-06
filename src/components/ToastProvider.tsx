@@ -1,6 +1,7 @@
 import React, { ReactNode, useCallback, useState } from "react";
-import { Toast, ToastContext, ToastOptions } from "../hooks/useToast";
+import { ToastContext } from "../hooks/useToast";
 import { Toaster } from "./Toaster";
+import { Toast, ToastOptions } from "../@types/toastTypes";
 
 interface ToastProviderProps {
   children: ReactNode;
@@ -19,6 +20,8 @@ export const ToastProvider = (props: ToastProviderProps) => {
         backgroundColor = "#ffffff",
         color = "#000000",
         timeoutSeconds = 3000,
+        toastStatus = "default",
+        showCloseBtn = true
       }: ToastOptions = {}
     ) => {
       const newToast: Toast = {
@@ -29,6 +32,8 @@ export const ToastProvider = (props: ToastProviderProps) => {
         backgroundColor,
         timeoutSeconds,
         color,
+        toastStatus,
+        showCloseBtn
       };
 
       setToasts((prevToasts) => [newToast, ...prevToasts]);
