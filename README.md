@@ -1,4 +1,3 @@
-
 # React Cmac Toaster
 
 [![npm version](https://badge.fury.io/js/react-cmac-toaster.svg)](https://badge.fury.io/js/react-cmac-toaster)
@@ -6,7 +5,11 @@
 
 A simple and customizable React toast notification library for easy toast management in your applications. This package provides context-based toasts without requiring external dependencies like Redux.
 
+![Description](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3c2Y29qamg0d3QwcDY1YmFyczc3NzJwMjdzNnJqcHlmNmt1M3VxaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nP3VCdJAnRfSXatisN/giphy.gif)
+![Description](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3RkcW96dW41eWYyaHgzbGFhbzZtbHZiZHltbzYzYTQ1dHpjYTgxMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/71ok0Kjt7DGDV61saD/giphy.gif)
+
 ## Features
+
 - Lightweight and easy to use
 - Customizable toasts (width, color, duration, etc.)
 - Supports both text messages and JSX elements
@@ -34,15 +37,11 @@ yarn add react-cmac-toaster
 First, wrap your application with the `ToastProvider` to make the toast system available across the app:
 
 ```tsx
-import React from 'react';
-import { ToastProvider } from 'react-cmac-toaster';
+import React from "react";
+import { ToastProvider } from "react-cmac-toaster";
 
 function App() {
-  return (
-    <ToastProvider>
-      {/* Your app components go here */}
-    </ToastProvider>
-  );
+  return <ToastProvider>{/* Your app components go here */}</ToastProvider>;
 }
 
 export default App;
@@ -53,8 +52,8 @@ export default App;
 You can trigger a toast anywhere in your app using the `useToast` hook.
 
 ```tsx
-import React from 'react';
-import { useToast } from 'react-cmac-toaster';
+import React from "react";
+import { useToast } from "react-cmac-toaster";
 
 const ExampleComponent = () => {
   const toast = useToast();
@@ -65,7 +64,7 @@ const ExampleComponent = () => {
       backgroundColor: "black",
       color: "white",
       timeoutSeconds: 5000,
-      toastStatus: "success"
+      toastStatus: "success",
     });
 
     // Displaying a custom JSX element
@@ -97,15 +96,15 @@ The `open` function accepts a message (which can be a string or JSX element) and
 
 #### Available Options
 
-| Option          | Type      | Default                        | Description                                                |
-|-----------------|-----------|--------------------------------|------------------------------------------------------------|
-| `toastWidth`    | `string`  | `"330px"`                      | Sets the width of the toast.                               |
-| `toastMsgWidth` | `string`  | `"298px"`                      | Sets the width of the message area inside the toast.        |
-| `backgroundColor`| `string` | `"#ffffff"`| Sets the background color of the toast.                     |
-| `color`         | `string`  | `"#000000"`       | Sets the text color of the toast.                          |
-| `showCloseBtn`         | `boolean`  | `true`       | Determines whether the close button should be displayed.                          |
-| `timeoutSeconds`| `number`  | `3000`                         | Sets how long the toast should be visible (in milliseconds).|
-| `toastStatus`   | `string`                                  | `"default"`  | Accepts one of the following values to define the toast type: `"success"`, `"error"`, `"warning"`, `"notify"`, `"default"`. |
+| Option            | Type      | Default     | Description                                                                                                                 |
+| ----------------- | --------- | ----------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `toastWidth`      | `string`  | `"330px"`   | Sets the width of the toast.                                                                                                |
+| `toastMsgWidth`   | `string`  | `"298px"`   | Sets the width of the message area inside the toast.                                                                        |
+| `backgroundColor` | `string`  | `"#ffffff"` | Sets the background color of the toast.                                                                                     |
+| `color`           | `string`  | `"#000000"` | Sets the text color of the toast.                                                                                           |
+| `showCloseBtn`    | `boolean` | `true`      | Determines whether the close button should be displayed.                                                                    |
+| `timeoutSeconds`  | `number`  | `3000`      | Sets how long the toast should be visible (in milliseconds).                                                                |
+| `toastStatus`     | `string`  | `"default"` | Accepts one of the following values to define the toast type: `"success"`, `"error"`, `"warning"`, `"notify"`, `"default"`. |
 
 ### 4. Closing a Toast Programmatically
 
